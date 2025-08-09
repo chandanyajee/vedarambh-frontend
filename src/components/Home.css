@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+.img1{
+  width: 100%;
+  height: 100%;
+}
+
+.homebody{
+  background-color: #f1e3c7d8;
+}
+.home-container {
+    padding: 10px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  nav{
+    display: flex;
+    
+  }
+  .logo_main{
+    margin-left: 10px;
+    margin-right: 35%;
+  }
+  .logo {
+    width: 10rem;
+    margin: right 90%;
+  }
+  
+  .Nav_item{
+    list-style: none;
+    /* display: flex;
+    justify-content: space-around; */
+    display: grid;
+    gap: 45%;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    color: white;
+    font-size: large;
+  }
+  main{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+  main section{
+    width: 100%;
+  }
+  main section h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  main section h4{
+    font-size: 2rem;
+    /* font-weight: 700; */
+    color: #0d1f3b;
+    line-height: normal;
+  }
+  .main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  
+  .sub-title {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-top: -10px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    color: #5c4b2b;
+    margin-top: 10px;
+  }
+  
+  .button-group {
+    margin-top: 40px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .primary-btn {
+    background-color: #f97316; /* orange */
+    color: white;
+  }
+  
+  .secondary-btn {
+    background-color: #fbbf24; /* amber */
+    color: black;
+  }
+  
+
+  .paybutton{
+  background-color: rgba(124, 124, 168, 0.822);
+  text-align: center;
+  padding-left: 50%;
+  padding: 5px;
+  border-radius: 5%;
+  
+}
+.diplay button{
+  padding: 20px;
+}
+.diplay{
+  text-align: center;
+}
+.Nave{
+  /* background-color: red; */
+  margin-left: 50vw;
+}
+
+.bg-costam{
+  background-color: #eea571;
+}

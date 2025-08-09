@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+
+
+.home-container {
+    text-align: center;
+    padding: 40px;
+    background: #fffaf0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .om-image {
+    width: 100px;
+    margin: 20px 0;
+  }
+  
+  .btn-group button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff9933;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-group button:hover {
+    background: #cc7a00;
+  }
+  
+  .home-container {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fef8ef;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  
+  .sub-title {
+    font-size: 1.5rem;
+    color: #374151;
+    margin-top: -10px;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    color: #5c4b2b;
+    margin-top: 10px;
+  }
+  
+  .button-group {
+    margin-top: 40px;
+  }
+  
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .primary-btn {
+    background-color: #f97316; /* orange */
+    color: white;
+  }
+  
+  .secondary-btn {
+    background-color: #fbbf24; /* amber */
+    color: black;
+  }
+  
