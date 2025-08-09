@@ -72,7 +72,7 @@ import CourseDetails from '../course/CourseDetails';
 import BrowseCourses from '../course/BrowseCourses';
 // import downloadCertificate from '../Certificate/Certificate.jsx';
 
-import LoginForm from '../app/login/LoginForm.jsx';
+// import LoginForm from '../app/login/LoginForm.jsx';
 
 //Qize Secshan 
 import CreateQuiz from '../Quiz/CreateQuiz.jsx';
@@ -184,7 +184,7 @@ export const router = <BrowserRouter>
       <Route path="/faq" element={<FaqPage />} />
 
       {/* New Ading page  */}
-        <Route path="/LoginForm" element={<LoginForm />} />
+        {/* <Route path="/LoginForm" element={<LoginForm />} /> */}
       
 
     {/* Other routes */}
