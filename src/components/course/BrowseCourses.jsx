@@ -4,6 +4,7 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { useNavigate, useParams } from 'react-router-dom';
 
+
 const BrowseCourses = () => {
   const [courses, setCourses] = useState([]);
   const [student, setStudent] = useState({});
