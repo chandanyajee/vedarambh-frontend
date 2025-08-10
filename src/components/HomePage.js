@@ -119,12 +119,6 @@ const HomePage = () => {
     </div>
 
 
-
-
-
-    <Footer/>
-
-
         <div className="min-h-screen bg-white">
       {/* <Header /> */}
       

@@ -72,14 +72,14 @@ const Navbar = () => {
                 </Button>
               </Link>
 
-              <Link to="/signup">
-                <Button size="sm">Join VedArambh</Button>
+              <Link to="/register">
+                <Button variant="outline" size="sm" className="" >Join VedArambh</Button>
               </Link>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(true)}
-                className=" text-blue-600 bg-red md:hidden w-6 h-6 flex items-center justify-center"
+                className=" text-black-600 bg-black md:hidden w-6 h-6 flex items-center justify-center"
               >
                 <i className="ri-menu-line  text-xl"></i>
               </button>
