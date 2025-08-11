@@ -12,18 +12,19 @@ const Navbar = () => {
     setLanguage(language === "English" ? "हिंदी" : "English");
   };
 
+  // Links in both languages
   const navLinks = [
-    { path: "/courses", label: "Courses" },
-    { path: "/ViewContent", label: "Videos" },
-    { path: "/calendar", label: "Calendar" },
-    { path: "/upload", label: "Upload" },
-    { path: "/about", label: "About" },
-    { path: "/contact", label: "Contact" },
+    { path: "/courses", label: language === "English" ? "Courses" : "पाठ्यक्रम" },
+    { path: "/ViewContent", label: language === "English" ? "Videos" : "वीडियो" },
+    { path: "/calendar", label: language === "English" ? "Calendar" : "कैलेंडर" },
+    { path: "/upload", label: language === "English" ? "Upload" : "अपलोड" },
+    { path: "/about", label: language === "English" ? "About" : "परिचय" },
+    { path: "/contact", label: language === "English" ? "Contact" : "संपर्क" },
   ];
 
   return (
     <>
-      {/* Top Navbar */}
+      {/* Navbar */}
       <header className="bg-white shadow-sm border-b fixed w-full z-50 top-0">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -33,7 +34,7 @@ const Navbar = () => {
                 VedArambh
               </span>
               <span className="text-sm text-gray-500 hidden sm:block">
-                A Sanatan Initiative
+                {language === "English" ? "A Sanatan Initiative" : "एक सनातन पहल"}
               </span>
             </Link>
 
@@ -68,38 +69,38 @@ const Navbar = () => {
               {/* Login / Signup */}
               <Link to="/login">
                 <Button variant="outline" size="sm">
-                  Login
+                  {language === "English" ? "Login" : "लॉगिन"}
                 </Button>
               </Link>
-
               <Link to="/register">
-                <Button variant="outline" size="sm" className="" >Join VedArambh</Button>
+                <Button variant="outline" size="sm">
+                  {language === "English" ? "Join VedArambh" : "वेदआरम्भ से जुड़ें"}
+                </Button>
               </Link>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(true)}
-                className=" text-black-600 bg-black md:hidden w-6 h-6 flex items-center justify-center"
+                className="md:hidden w-6 h-6 flex items-center justify-center"
               >
-                <i className="ri-menu-line  text-xl"></i>
+                <i className="ri-menu-line text-xl"></i>
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Overlay Menu */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50">
-          {/* Background Overlay */}
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Dark background */}
           <div
             className="absolute inset-0 bg-black bg-opacity-50"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          {/* Side Menu */}
+          {/* Slide Menu */}
           <div className="absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col">
-            {/* Close Button */}
             <button
               onClick={() => setIsMenuOpen(false)}
               className="self-end mb-6"
@@ -107,7 +108,6 @@ const Navbar = () => {
               <i className="ri-close-line text-2xl"></i>
             </button>
 
-            {/* Menu Links */}
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
@@ -128,7 +128,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Page content below navbar */}
+      {/* Content Padding */}
       <div className="pt-16"></div>
     </>
   );

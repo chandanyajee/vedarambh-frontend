@@ -81,16 +81,15 @@ import Quiz from '../Quiz/Quiz.jsx';
 import StudentQuiz from '../Quiz/StudentQuiz.jsx';
 import Button from '../ui/Button.jsx';
 // New aading page 
-
+import Clender from "../calendar/Calendar.jsx";
 // import about from '../app/about/page.jsx';
 // import admin from '../app/admin-panel/page.jsx';
-// import calendar from '../app/calendar/CalendarGrid.jsx'; 
 
 
 
 export const router = <BrowserRouter>
   <Routes>
-    
+      
       <Route path="/" element={<Home />} />
       <Route path='/Footer' element={<Footer />} />
       <Route path='/Navbar' element={<Navbar />} />
@@ -140,7 +139,10 @@ export const router = <BrowserRouter>
       <Route path="/reset-password/:token" element={<ResetPassword />} />
 
       <Route path="/download-Certificate" element={<downloadCertificate />} />
+      {/* Clender Secsan Start  */}
+      <Route path="/Clender" element={<Clender />} />
 
+      {/* Clender End  */}
       {/* <Route path='/login_panal' alemant={<login_panal />} /> */}
 
         <Route path="/AllLibrary" element={<AllLibrary />} />
@@ -183,8 +185,12 @@ export const router = <BrowserRouter>
       <Route path="/about" element={<AboutPage />} />
       <Route path="/faq" element={<FaqPage />} />
 
+
+
+      
       {/* New Ading page  */}
         <Route path="/LoginForm" element={<LoginForm />} />
+      
       
 
     {/* Other routes */}
