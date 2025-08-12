@@ -68,11 +68,12 @@ import Login from '../Login panal/Login';
 import Register from '../Login panal/Register';
 import Logout from '../Login panal/LogoutButton.jsx';
 
+
 import CourseDetails from '../course/CourseDetails';
 import BrowseCourses from '../course/BrowseCourses';
 // import downloadCertificate from '../Certificate/Certificate.jsx';
 
-import LoginForm from '../app/login/LoginForm.jsx';
+// import LoginForm from '../app/login/LoginForm.jsx';
 
 //Qize Secshan 
 import CreateQuiz from '../Quiz/CreateQuiz.jsx';
@@ -84,6 +85,11 @@ import Button from '../ui/Button.jsx';
 import Clender from "../calendar/Calendar.jsx";
 // import about from '../app/about/page.jsx';
 // import admin from '../app/admin-panel/page.jsx';
+// import Header from '../components/Header.tsx';
+// import Button from '../components/ui/Button';
+import LoginForm from '../app/login/LoginForm.jsx';
+import ForgotPasswordForm from '../app/login/ForgotPasswordForm';
+import LoginF from '../app/login/LoginForm.jsx';
 
 
 
@@ -190,7 +196,8 @@ export const router = <BrowserRouter>
       
       {/* New Ading page  */}
         <Route path="/LoginForm" element={<LoginForm />} />
-      
+        <Route path="/ForgotPasswordForm" element={<ForgotPasswordForm />} />
+        <Route path="/LoginF" element={<LoginF />} />
       
 
     {/* Other routes */}

@@ -424,7 +424,7 @@ const UnifiedRegister = () => {
 
             <button
               type="submit"
-              className="bg-orange-700 text-white py-2 rounded hover:bg-orange-800 w-full transition"
+              className="bg-blue-500 p-4 bg-orange-700 text-white py-2 rounded hover:bg-orange-800 w-full transition"
             >
               Register
             </button>

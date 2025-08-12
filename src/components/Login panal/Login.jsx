@@ -234,7 +234,7 @@ const UnifiedLogin = () => {
             </div>
 
             <div>
-              <button type="submit" className="w-full bg-orange-700 hover:bg-orange-800 text-white font-semibold py-2 rounded-lg transition">
+              <button type="submit" className=" bg-blue-500 p-4 text-white w-full bg-black-700 hover:bg-orange-800 text-white font-semibold py-2 rounded-lg transition">
                 Login
               </button>
             </div>
