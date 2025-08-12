@@ -87,9 +87,9 @@ import Clender from "../calendar/Calendar.jsx";
 // import admin from '../app/admin-panel/page.jsx';
 // import Header from '../components/Header.tsx';
 // import Button from '../components/ui/Button';
-import LoginForm from '../app/login/LoginForm.jsx';
-import ForgotPasswordForm from '../app/login/ForgotPasswordForm';
-import LoginF from '../app/login/LoginForm.jsx';
+// import LoginForm from '../app/login/LoginForm.jsx';
+// import ForgotPasswordForm from '../app/login/ForgotPasswordForm';
+// import LoginF from '../app/login/LoginForm.jsx';
 
 
 
@@ -195,9 +195,9 @@ export const router = <BrowserRouter>
 
       
       {/* New Ading page  */}
-        <Route path="/LoginForm" element={<LoginForm />} />
-        <Route path="/ForgotPasswordForm" element={<ForgotPasswordForm />} />
-        <Route path="/LoginF" element={<LoginF />} />
+        {/* <Route path="/LoginForm" element={<LoginForm />} /> */}
+        {/* <Route path="/ForgotPasswordForm" element={<ForgotPasswordForm />} /> */}
+        {/* <Route path="/LoginF" element={<LoginF />} /> */}
       
 
     {/* Other routes */}
