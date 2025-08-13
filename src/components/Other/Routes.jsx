@@ -104,13 +104,9 @@ export const router = <BrowserRouter>
 
       <Route path="/Button" element={<Button />} />
 
-      <Route path="/NewAdmin" element={<NewAdmin />} />
       <Route path="/browse-courses" element={<BrowseCourses />} />
       <Route path="/CourseDetails" element={<CourseDetails />} />
       <Route path="/teacher/add-course" element={<AddCourse />} />
-      <Route path="/AdminDashboard" element={< AdminDashboard/>} />
-      <Route path="/AdminPanele" element={< AdminPanele/>} />
-      <Route path="/AdminTopbar" element={< AdminTopbar/>} />
 
       <Route path="/Login" element={< Login/>} /> 
       <Route path="/Register" element={< Register/>} /> 
@@ -121,24 +117,28 @@ export const router = <BrowserRouter>
 
       <Route path="/Panchang" element={< Panchang/>} />
 
-      <Route path="/StudentIDCard" element={< IDCardGenerator/>} />
 
-      <Route path="/StudentRegisterForm" element={< StudentRegisterForm/>} />
-
+        {/* Institute Secshan   */}
 
       <Route path="/InstitutionRegister" element={<InstitutionRegister />} />
       <Route path="/institution/dashboard" element={<InstitutionDashboard />} />
       <Route path="/institution/batches" element={<InstitutionBatchManager />} />
       <Route path="/Institution/login" element={<InstitutionLogin />} />
 
+      {/* Admin secshan  */}
+
+      <Route path="/NewAdmin" element={<NewAdmin />} />
+      <Route path="/AdminDashboard" element={< AdminDashboard/>} />
+      <Route path="/AdminPanele" element={< AdminPanele/>} />
+      <Route path="/AdminTopbar" element={< AdminTopbar/>} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route path="/admin/dashboard" element={<AAdminDashboard />} />
       <Route path="/admin/verify-users" element={<AdminVerifyUsers />} />
       <Route path="/admin/manage-courses" element={<AdminManageCourses />} />
       <Route path="/admin/change-password" element={<AdminChangePassword />} />
+      <Route path="/admin/export-csv" element={<AdminExportCSV />} />
       
 
-      <Route path="/admin/export-csv" element={<AdminExportCSV />} />
       {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
       <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -157,19 +157,22 @@ export const router = <BrowserRouter>
         <Route path="/ShortsPage" element={<ShortsPage />} />
         <Route path="/downloadCertificate" element={<downloadCertificate />} />
 
-
+      {/* Quiz secshan  */}
 
       <Route path="/CreateQuiz" element={<CreateQuiz />} />
       <Route path="/Leaderboard" element={<Leaderboard />} />
       <Route path="/Quiz" element={<Quiz />} />
       <Route path="/StudentQuiz" element={<StudentQuiz />} />
 
-
+      {/* Techar Secashan  */}
       <Route path="/teacher/register" element={<TeacherRegister />} />
       <Route path='/Teacher/Dashboard' element={<TeacherDasgboard />} />
       <Route path='/teacher/login'  element={< TeacherLogin/>}/>
 
+      {/* Student Secshan  */}
 
+      <Route path="/StudentIDCard" element={< IDCardGenerator/>} />
+      <Route path="/StudentRegisterForm" element={< StudentRegisterForm/>} />
       <Route path='/student' element={<StudentRegister/>}/>
       <Route path='/StudentCourses' element={<StudentCourses />} />
       <Route path='/Student/CourseDetails' element={<StudentCourseDetails />} />
