@@ -62,7 +62,20 @@ const Navbar = () => {
                 onClick={toggleLanguage}
                 className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer whitespace-nowrap flex items-center space-x-1"
               >
-                <i className="ri-translate-2 w-4 h-4 flex items-center justify-center"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M12 6v6l4 2m6 8H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2z"
+                  />
+                </svg>
                 <span>{language}</span>
               </button>
 
@@ -81,9 +94,23 @@ const Navbar = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(true)}
-                className="md:hidden w-6 h-6 flex items-center justify-center"
+                className="md:hidden w-8 h-8 flex items-center justify-center"
               >
-                <i className="ri-menu-line text-xl"></i>
+                {/* Hamburger Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
               </button>
             </div>
           </div>
@@ -105,7 +132,21 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
               className="self-end mb-6"
             >
-              <i className="ri-close-line text-2xl"></i>
+              {/* Close Icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
             </button>
 
             <nav className="flex flex-col space-y-4">
