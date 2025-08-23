@@ -12,7 +12,6 @@ const Navbar = () => {
     setLanguage(language === "English" ? "हिंदी" : "English");
   };
 
-  // Links in both languages
   const navLinks = [
     { path: "/courses", label: language === "English" ? "Courses" : "पाठ्यक्रम" },
     { path: "/ViewContent", label: language === "English" ? "Videos" : "वीडियो" },
@@ -56,11 +55,11 @@ const Navbar = () => {
             </nav>
 
             {/* Right Side */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               {/* Language Toggle */}
               <button
                 onClick={toggleLanguage}
-                className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer whitespace-nowrap flex items-center space-x-1"
+                className="px-2 py-1 text-xs sm:text-sm bg-gray-100 hover:bg-gray-200 rounded-md transition-colors cursor-pointer whitespace-nowrap flex items-center space-x-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -76,18 +75,24 @@ const Navbar = () => {
                     d="M12 6v6l4 2m6 8H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2z"
                   />
                 </svg>
-                <span>{language}</span>
+                <span className="hidden sm:inline">{language}</span>
               </button>
 
-              {/* Login / Signup */}
-              <Link to="/login">
+              {/* Login - hide on mobile */}
+              <Link to="/login" className="hidden sm:block">
                 <Button variant="outline" size="sm">
                   {language === "English" ? "Login" : "लॉगिन"}
                 </Button>
               </Link>
+
+              {/* Join VedArambh - smaller on mobile */}
               <Link to="/register">
-                <Button variant="outline" size="sm">
-                  {language === "English" ? "Join VedArambh" : "वेदआरम्भ से जुड़ें"}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="px-2 py-1 text-xs sm:px-3 sm:py-1.5 sm:text-sm"
+                >
+                  {language === "English" ? "Join" : "जुड़ें"}
                 </Button>
               </Link>
 
@@ -96,7 +101,6 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen(true)}
                 className="md:hidden w-8 h-8 flex items-center justify-center"
               >
-                {/* Hamburger Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-6 h-6"
@@ -120,19 +124,16 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
-          {/* Dark background */}
           <div
             className="absolute inset-0 bg-black bg-opacity-50"
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          {/* Slide Menu */}
           <div className="absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col">
             <button
               onClick={() => setIsMenuOpen(false)}
               className="self-end mb-6"
             >
-              {/* Close Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -169,7 +170,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Content Padding */}
       <div className="pt-16"></div>
     </>
   );
