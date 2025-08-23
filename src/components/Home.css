@@ -6,7 +6,7 @@
 }
 
 .homebody{
-  background-color: #f1e3c7d8;
+  background-color: #f1e3c7d8
 }
 .home-container {
     padding: 10px 20px;
@@ -116,7 +116,31 @@
   /* background-color: red; */
   margin-left: 50vw;
 }
-
+/* home page 1 */
 .bg-costam{
-  background-color: #eea571;
+  /* background-color: #49433e; */
+  background-image: url(./nachural\ 3.jpg);
+  background-size: cover;
+}
+.om{
+  font-size: 5vw;
+  color:  rgb(235, 104, 17);
+  margin-top: 0px;
+}
+.veda{
+   font-size: 5vw;
+  /* color:  rgb(235, 166, 17); */
+  /* color: color-mix(in srgb, rgb(233, 165, 20) 50%, rgb(61, 224, 12)); */
+  margin-top: 0px;
+  background: linear-gradient(to left, rgb(221, 126, 2), rgb(231, 48, 3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} 
+
+.salok_seksan{
+  background-color: aliceblue;
+  padding: 2%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 5vh;
 }

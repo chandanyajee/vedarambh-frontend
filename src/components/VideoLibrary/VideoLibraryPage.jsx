@@ -48,9 +48,43 @@ const VideoLibraryPage = () => {
   return (
     <>
     <Navbar />
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">📺 Video Library</h2>
 
+
+    <div className="p-4">
+      <h2 className="text-xl aligan-center font-bold mb-4">📺 Video Library</h2>
+        <h1 className="text-xl aligan-center font-bold mb-4"> <center>Ramayan</center></h1>
+        <table>
+          <tr>
+            <td>
+                <iframe width="450" height="315" src="https://www.youtube.com/embed/3vytH1BSoIc?si=NoPYxoKBve6G-hNp"  frameborder="0"></iframe>
+            </td>
+            <td>
+              <iframe width="450" height="315" src="https://www.youtube.com/embed/X8MeHJDxnzo?si=-4_tzddph6Ds1Ko5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+            <td>
+            <iframe width="450" height="315" src="https://www.youtube.com/embed/bwp0uMBnoDU?si=pDVT1hVTo0NV1_rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+          </tr>
+          <tr>
+
+          </tr>
+          <tr>
+            <td>
+                <iframe width="450" height="315" src="https://www.youtube.com/embed/wHbnj6XvVKo?si=XEsNFt5q9jh5s4qU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+            <td>
+
+            <iframe width="450" height="315" src="https://www.youtube.com/embed/OhRpOsDjpCE?si=kSAkPI1Pn7BTaq9t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </td>
+            <td>
+
+            </td>
+          </tr>
+        </table>
+
+        <h1 className="text-xl aligan-center font-bold mb-4"> <center>Bhagwat Gita </center></h1>
+
+        {/*       
       <form onSubmit={handleUpload} className="space-y-2 mb-6">
         <input type="text" placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} className="w-full border p-2" />
         <textarea placeholder="Description" value={desc} onChange={e => setDesc(e.target.value)} className="w-full border p-2" />
@@ -86,7 +120,7 @@ const VideoLibraryPage = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
     <Footer />
     </>

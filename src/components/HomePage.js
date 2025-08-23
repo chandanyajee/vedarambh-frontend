@@ -24,18 +24,19 @@ const HomePage = () => {
   return (
     <>
     <Navbar/>
-    <div className="bg-costam bg-gradient-to-br from-orange-50 via-yellow-100 to-white pt-16">
+    <div className="bg-costam bg-gradient-to-br from-orange-50 via-yellow-100 to-white pt-1">
       {/* Hero Section */}
-      <section className="text-center py-14 px-4">
+      <section className="text-center  px-4">
+        <h1 className='om text-bold'>ॐ</h1>
         <h1 className="text-4xl md:text-5xl font-bold text-orange-800 mb-4">
-          📖 Learn Sanatan Wisdom
+          📖 सनातन ज्ञान की शुरुआत यहाँ से करें 
         </h1>
         <p className="text-lg text-gray-700 max-w-xl mx-auto">
-          Let Sanatan Gyaan Light Your Path – Join the journey of eternal knowledge & values.
+          सरल, सुलभ और मनोरंजक शिक्षा.
         </p>
-        <Link to="/StudentCourses">
+        <Link to="/VideoLibraryPage">
           <button className="bg-blue-400 mt-6 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-black font-medium rounded-xl shadow-lg">
-            Browse Courses
+            Browse Library
           </button>
         </Link>
         <img
@@ -390,15 +391,29 @@ const HomePage = () => {
                 Join as Student
               </Button>
             </Link>
-            <Link href="/signup/teacher">
-              <Button variant="outline" size="lg" className="px-10 py-4 text-lg border-white text-white hover:bg-white hover:text-gray-900">
-                <i className="ri-graduation-cap-line mr-2 w-5 h-5 flex items-center justify-center"></i>
-                Register as Teacher
-              </Button>
-            </Link>
+           <a
+  href="https://docs.google.com/forms/d/e/1FAIpQLSf3-FKVUl_HoyUoo0-_LJg6XFcoo_jpiWyZoUFPIib6n_t82w/viewform?usp=sharing&ouid=116259797077440685600"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button
+    className="px-10 py-4 text-lg border border-white text-white rounded-2xl hover:bg-white hover:text-gray-900 flex items-center"
+  >
+    <i className="ri-graduation-cap-line mr-2 w-5 h-5 flex items-center justify-center"></i>
+    Feedback
+  </button>
+</a>
+
           </div>
         </div>
       </section>
+
+            {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf3-FKVUl_HoyUoo0-_LJg6XFcoo_jpiWyZoUFPIib6n_t82w/viewform?usp=sharing&ouid=116259797077440685600">
+              <Button variant="outline" size="lg" className="px-10 py-4 text-lg border-white text-white hover:bg-white hover:text-gray-900">
+                <i className="ri-graduation-cap-line mr-2 w-5 h-5 flex items-center justify-center"></i>
+                Feedback
+              </Button>
+            </Link> */}
 
       <Footer />
     </div>

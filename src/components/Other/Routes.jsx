@@ -23,8 +23,9 @@ import QuickStats from '../Student/StudentDashboard/QuickStats.jsx';
 import Sidebar from '../Student/StudentDashboard/Sidebar.jsx';
 import Topbar from '../Student/StudentDashboard/Topbar.jsx';
 
-
-import TeacherDasgboard from '../Teacher/TeacherDashboard';
+// techar desbord 
+// import TeacherDasgboard from '../Teacher/TeacherDashboard';
+import TeacherDashboard from '../../pages/teacher/TeacherDashboard.jsx';
 import TeacherRegister from '../Teacher/TeacherRegister';
 import TeacherLogin from '../Teacher/TeacherLogin';
 
@@ -61,12 +62,14 @@ import LibraryPage from '../Library/LibraryPage';
 import AllLibrary from './All Library';
 import Panchang from './Panchang';
 import IDCardGenerator from './IDCardGenerator';
-import UploadForm from '../UploadForm';
+import UploadContent from '../UploadForm';
 import ViewContent from '../ViewContent';
 // import Navbar from '../Navbar';
 import Login from '../Login panal/Login';
 import Register from '../Login panal/Register';
 import Logout from '../Login panal/LogoutButton.jsx';
+
+// import UploadContent from '../UploadForm';
 
 
 import CourseDetails from '../course/CourseDetails';
@@ -81,6 +84,9 @@ import Leaderboard from '../Quiz/Leaderboard.jsx';
 import Quiz from '../Quiz/Quiz.jsx';
 import StudentQuiz from '../Quiz/StudentQuiz.jsx';
 import Button from '../ui/Button.jsx';
+
+import ParentDashboard from '../../pages/ParentDashboard.jsx';
+
 // New aading page 
 import Clender from "../calendar/Calendar.jsx";
 // import about from '../app/about/page.jsx';
@@ -90,6 +96,9 @@ import Clender from "../calendar/Calendar.jsx";
 // import LoginForm from '../app/login/LoginForm.jsx';
 // import ForgotPasswordForm from '../app/login/ForgotPasswordForm';
 // import LoginF from '../app/login/LoginForm.jsx';
+
+
+import VedArambhHome3 from '../HomePage/Homepage3.jsx';
 
 
 
@@ -112,7 +121,7 @@ export const router = <BrowserRouter>
       <Route path="/Register" element={< Register/>} /> 
       <Route path="/Logout" element={< Logout/>} />
 
-      <Route path="/UploadForm" element={< UploadForm/>} /> 
+      <Route path="/UploadContent" element={< UploadContent/>} /> 
       <Route path="/ViewContent" element={< ViewContent/>} />  
 
       <Route path="/Panchang" element={< Panchang/>} />
@@ -166,8 +175,10 @@ export const router = <BrowserRouter>
 
       {/* Techar Secashan  */}
       <Route path="/teacher/register" element={<TeacherRegister />} />
-      <Route path='/Teacher/Dashboard' element={<TeacherDasgboard />} />
+      <Route path='/Teacher/Dashboard' element={<TeacherDashboard />} />
       <Route path='/teacher/login'  element={< TeacherLogin/>}/>
+
+      <Route path='/ParentDashboard'  element={< ParentDashboard/>}/>
 
       {/* Student Secshan  */}
 
@@ -200,7 +211,10 @@ export const router = <BrowserRouter>
       {/* New Ading page  */}
         {/* <Route path="/LoginForm" element={<LoginForm />} /> */}
         {/* <Route path="/ForgotPasswordForm" element={<ForgotPasswordForm />} /> */}
-        {/* <Route path="/LoginF" element={<LoginF />} /> */}
+       
+       
+       
+        <Route path="/VedArambhHome3" element={<VedArambhHome3 />} />
       
 
     {/* Other routes */}

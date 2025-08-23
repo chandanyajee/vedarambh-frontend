@@ -195,49 +195,51 @@
 
 // export default TeacherDashboard;
 
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+// import Navbar from '../Navbar';
+// import Footer from '../Footer';
 
-const TeacherDashboard = () => {
-  const [teacher, setTeacher] = useState(null);
-  const [courses, setCourses] = useState([]);
-  const token = localStorage.getItem('teacherToken');
+// const TeacherDashboard = () => {
+//   const [teacher, setTeacher] = useState(null);
+//   const [courses, setCourses] = useState([]);
+//   const token = localStorage.getItem('teacherToken');
 
-  useEffect(() => {
-    axios.get('http://localhost:5000/api/teacher/dashboard', {
-      headers: { Authorization: `Bearer ${token}` }
-    }).then(res => {
-      setTeacher(res.data.teacher);
-      setCourses(res.data.courses);
-    });
-  }, []);
+//   useEffect(() => {
+//     axios.get('http://localhost:5000/api/teacher/dashboard', {
+//       headers: { Authorization: `Bearer ${token}` }
+//     }).then(res => {
+//       setTeacher(res.data.teacher);
+//       setCourses(res.data.courses);
+//     });
+//   }, []);
 
-  return (
-    <>
-      <Navbar />
-      <div className="max-w-5xl mx-auto p-6">
-        <h2 className="text-2xl font-bold text-blue-700 mb-4">Welcome, {teacher?.name}</h2>
-        <div className="bg-white shadow p-4 rounded mb-4">
-          <p><strong>Email:</strong> {teacher?.email}</p>
-          <p><strong>Qualification:</strong> {teacher?.qualification}</p>
-        </div>
+//   return (
+//     <>
+//       <Navbar />
+//       <div className="max-w-5xl mx-auto p-6">
+//         <h2 className="text-2xl font-bold text-blue-700 mb-4">Welcome, {teacher?.name}</h2>
+//         <div className="bg-white shadow p-4 rounded mb-4">
+//           <p><strong>Email:</strong> {teacher?.email}</p>
+//           <p><strong>Qualification:</strong> {teacher?.qualification}</p>
+//         </div>
 
-        <div className="bg-white shadow p-4 rounded">
-          <h3 className="text-lg font-semibold mb-2">My Courses</h3>
-          {courses.length > 0 ? (
-            <ul>
-              {courses.map(c => <li key={c._id}>{c.title}</li>)}
-            </ul>
-          ) : (
-            <p>No courses yet.</p>
-          )}
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
-};
+//         <div className="bg-white shadow p-4 rounded">
+//           <h3 className="text-lg font-semibold mb-2">My Courses</h3>
+//           {courses.length > 0 ? (
+//             <ul>
+//               {courses.map(c => <li key={c._id}>{c.title}</li>)}
+//             </ul>
+//           ) : (
+//             <p>No courses yet.</p>
+//           )}
+//         </div>
+//       </div>
+//       <Footer />
+//     </>
+//   );
+// };
 
-export default TeacherDashboard;
+// export default TeacherDashboard;
+
+

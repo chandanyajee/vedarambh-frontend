@@ -162,6 +162,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import  './Ragistesan.css'
 
 // Backend base URL - deployed backend
 const API_BASE_URL = 'https://vedarambh-backend.onrender.com';
@@ -245,7 +246,7 @@ const UnifiedRegister = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-white flex items-center justify-center px-4">
+      <div className=" Ragistesan_Man_Cantenar min-h-screen bg-gradient-to-br from-yellow-50 via-orange-50 to-white flex items-center justify-center px-4">
         <div className="bg-white shadow-2xl rounded-xl p-8 w-full max-w-lg">
           <h2 className="text-2xl font-bold mb-4 text-orange-800 text-center">📝 Register on VedArambh</h2>
 

@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+.Ragistesan_Man_Cantenar{
+    background-image: url(./mandir\ 2.jpg);
+    background-repeat: no-repeat;
+    /* box-sizing: ; */
+    background-size: cover;
+    /* box-sizing: cover; */
+}

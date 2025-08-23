@@ -1,50 +1,81 @@
 // UploadContent.jsx (React + Tailwind CSS)
-import { useState } from 'react';
-import axios from 'axios';
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-
+import { useState } from "react";
+import axios from "axios";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const UploadContent = () => {
-  const [type, setType] = useState('document');
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('Vedas');
-  const [language, setLanguage] = useState('Hindi');
+  const [type, setType] = useState("document");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("Vedas");
+  const [language, setLanguage] = useState("Hindi");
   const [file, setFile] = useState(null);
-  const [message, setMessage] = useState('');
+  const [youtubeLink, setYoutubeLink] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleUpload = async (e) => {
     e.preventDefault();
-    if (!file) return setMessage('Please select a file to upload.');
+
+    // अगर type video है और YouTube link दिया गया है
+    if (type === "video" && youtubeLink) {
+      try {
+        const res = await axios.post("http://localhost:5000/api/upload-youtube", {
+          type,
+          title,
+          description,
+          category,
+          language,
+          youtubeLink,
+        });
+
+        setMessage(res.data.message || "YouTube video uploaded successfully!");
+        setTitle("");
+        setDescription("");
+        setYoutubeLink("");
+      } catch (error) {
+        console.error(error);
+        setMessage("YouTube upload failed. Try again later.");
+      }
+      return;
+    }
+
+    // अगर file upload करना है
+    if (!file) return setMessage("Please select a file to upload.");
 
     const formData = new FormData();
-    formData.append('type', type);
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('category', category);
-    formData.append('language', language);
-    formData.append('file', file);
+    formData.append("type", type);
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("category", category);
+    formData.append("language", language);
+    formData.append("file", file);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/upload', formData);
-      setMessage(res.data.message);
-      setTitle('');
-      setDescription('');
+      const res = await axios.post("http://localhost:5000/api/upload", formData);
+      setMessage(res.data.message || "File uploaded successfully!");
+      setTitle("");
+      setDescription("");
       setFile(null);
     } catch (error) {
       console.error(error);
-      setMessage('Upload failed. Try again later.');
+      setMessage("Upload failed. Try again later.");
     }
   };
 
   return (
+    <>
+    <Navbar/>
+    
+   
     <div className="p-6 max-w-3xl mx-auto bg-white rounded shadow mt-6">
       <h2 className="text-2xl font-bold mb-4 text-center">Upload Your Content</h2>
       {message && <p className="text-center text-sm text-blue-600 mb-4">{message}</p>}
+
       <form onSubmit={handleUpload} className="space-y-4">
+        {/* Content Type */}
         <div className="flex gap-4 flex-wrap justify-center">
-          {['document', 'video', 'audio', 'image'].map((t) => (
+          {["document", "video", "audio", "image"].map((t) => (
             <label key={t} className="capitalize">
               <input
                 type="radio"
@@ -58,6 +89,7 @@ const UploadContent = () => {
           ))}
         </div>
 
+        {/* Title */}
         <input
           type="text"
           placeholder="Title"
@@ -67,6 +99,7 @@ const UploadContent = () => {
           required
         />
 
+        {/* Description */}
         <textarea
           placeholder="Description"
           className="w-full border px-4 py-2 rounded"
@@ -74,14 +107,17 @@ const UploadContent = () => {
           onChange={(e) => setDescription(e.target.value)}
         />
 
+        {/* Category & Language */}
         <div className="flex flex-wrap gap-4">
           <select
             className="border px-4 py-2 rounded"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            {['Vedas', 'Puranas', 'Mahabharat', 'Ramayan', 'Other'].map((cat) => (
-              <option key={cat} value={cat}>{cat}</option>
+            {["Vedas", "Puranas", "Mahabharat", "Ramayan", "Other"].map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
             ))}
           </select>
 
@@ -90,24 +126,51 @@ const UploadContent = () => {
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
           >
-            {['Hindi', 'English', 'Sanskrit', 'Other'].map((lang) => (
-              <option key={lang} value={lang}>{lang}</option>
+            {["Hindi", "English", "Sanskrit", "Other"].map((lang) => (
+              <option key={lang} value={lang}>
+                {lang}
+              </option>
             ))}
           </select>
         </div>
 
-        <input
-          type="file"
-          className="block w-full border px-4 py-2 rounded"
-          onChange={(e) => setFile(e.target.files[0])}
-          required
-        />
+        {/* File or YouTube Link */}
+        {type === "video" ? (
+          <div>
+            <input
+              type="text"
+              placeholder="YouTube Link (optional)"
+              className="w-full border px-4 py-2 rounded mb-2"
+              value={youtubeLink}
+              onChange={(e) => setYoutubeLink(e.target.value)}
+            />
+            <p className="text-sm text-gray-500 text-center">OR upload a video file</p>
+            <input
+              type="file"
+              className="block w-full border px-4 py-2 rounded"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+          </div>
+        ) : (
+          <input
+            type="file"
+            className="block w-full border px-4 py-2 rounded"
+            onChange={(e) => setFile(e.target.files[0])}
+            required
+          />
+        )}
 
-        <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+        {/* Upload Button */}
+        <button
+          type="submit"
+          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        >
           Upload
         </button>
       </form>
     </div>
+    <Footer />
+     </>
   );
 };
 
