@@ -10,6 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import Navbar from "../Navbar";
+import LogoutButton from "../Login panal/LogoutButton";
 
 const AdminDashboard = () => {
   const [data, setData] = useState({
@@ -132,6 +133,7 @@ const AdminDashboard = () => {
 
     <>
     <Navbar />
+    <LogoutButton />
       <div className="ml-64 mt-20 p-6">
         <h2 className="text-xl font-bold mb-4">Admin Dashboard</h2>
     

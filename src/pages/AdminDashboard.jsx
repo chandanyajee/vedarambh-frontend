@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import LogoutButton from '../components/Login panal/LogoutButton';
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({});
@@ -80,6 +81,7 @@ const AdminDashboard = () => {
   return (
     <>
       <Navbar />
+      <LogoutButton />
       <div className="max-w-7xl mx-auto p-6">
         <h2 className="text-3xl font-bold text-blue-800 mb-6">Admin Dashboard</h2>
 

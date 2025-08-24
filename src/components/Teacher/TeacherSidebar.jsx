@@ -1,46 +1,46 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  FaChalkboardTeacher, // Font Awesome v5 se
+  FaChalkboardTeacher,
   FaBookOpen,
   FaClipboardList,
   FaUserGraduate,
   FaCog,
   FaSignOutAlt
-} from "react-icons/fa"; // ✅ yahan fa6 ki jagah fa
+} from "react-icons/fa";
 
 const TeacherSidebar = () => {
   return (
-    <div className="sidebar">
-      <h2>Teacher Panel</h2>
-      <ul>
+    <div>
+      <h2 className="text-xl font-bold mb-6">Teacher Panel</h2>
+      <ul className="space-y-4">
         <li>
-          <Link to="/teacher/dashboard">
+          <Link to="/teacher/dashboard" className="flex items-center gap-2 hover:text-blue-600">
             <FaChalkboardTeacher /> Dashboard
           </Link>
         </li>
         <li>
-          <Link to="/teacher/courses">
+          <Link to="/teacher/courses" className="flex items-center gap-2 hover:text-blue-600">
             <FaBookOpen /> Courses
           </Link>
         </li>
         <li>
-          <Link to="/teacher/assignments">
+          <Link to="/teacher/assignments" className="flex items-center gap-2 hover:text-blue-600">
             <FaClipboardList /> Assignments
           </Link>
         </li>
         <li>
-          <Link to="/teacher/students">
+          <Link to="/teacher/students" className="flex items-center gap-2 hover:text-blue-600">
             <FaUserGraduate /> Students
           </Link>
         </li>
         <li>
-          <Link to="/teacher/settings">
+          <Link to="/teacher/settings" className="flex items-center gap-2 hover:text-blue-600">
             <FaCog /> Settings
           </Link>
         </li>
         <li>
-          <Link to="/logout">
+          <Link to="/logout" className="flex items-center gap-2 hover:text-red-600">
             <FaSignOutAlt /> Logout
           </Link>
         </li>
