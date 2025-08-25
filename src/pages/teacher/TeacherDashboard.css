@@ -1,11 +1,11 @@
-.teacher-dashboard {
+/* .teacher-dashboard {
   display: flex;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-}
+} */
 
 /* Sidebar */
-.sidebar {
+/* .sidebar {
   background: #fff;
   border-right: 1px solid #ddd;
   padding: 20px;
@@ -33,10 +33,10 @@
 
 .sidebar ul li:hover {
   color: #ff6f00;
-}
+} */
 
 /* Main content */
-.main-content {
+/* .main-content {
   flex: 1;
   padding: 20px;
   background: #f9f9f9;
@@ -96,4 +96,4 @@
   height: 20%;
   overflow: hidden;
   margin-right: 5vw;
-}
+} */

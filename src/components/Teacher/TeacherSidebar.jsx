@@ -12,8 +12,8 @@ import {
 const TeacherSidebar = () => {
   return (
     <div>
-      <h2 className="text-xl font-bold mb-6">Teacher Panel</h2>
-      <ul className="space-y-4">
+      <h2 className="text-xl mt-16 font-bold mb-6">Teacher Panel</h2>
+      <ul className=" space-y-4">
         <li>
           <Link to="/teacher/dashboard" className="flex items-center gap-2 hover:text-blue-600">
             <FaChalkboardTeacher /> Dashboard
