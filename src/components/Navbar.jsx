@@ -129,7 +129,7 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           ></div>
 
-          <div className="absolute top-0 right-0 w-64 h-full bg-white shadow-lg p-6 flex flex-col">
+          <div className="absolute top-0 right-0 w-40 h-full bg-white shadow-lg p-6 flex flex-col">
             <button
               onClick={() => setIsMenuOpen(false)}
               className="self-end mb-6"
