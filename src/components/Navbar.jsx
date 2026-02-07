@@ -13,10 +13,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { path: "/courses", label: language === "English" ? "Courses" : "पाठ्यक्रम" },
+    { path: "/browse-courses", label: language === "English" ? "Courses" : "पाठ्यक्रम" },
     { path: "/ViewContent", label: language === "English" ? "Videos" : "वीडियो" },
-    { path: "/calendar", label: language === "English" ? "Calendar" : "कैलेंडर" },
-    { path: "/upload", label: language === "English" ? "Upload" : "अपलोड" },
+    { path: "/CalendarWidget", label: language === "English" ? "Calendar" : "कैलेंडर" },
+    { path: "/UploadContent", label: language === "English" ? "Upload" : "अपलोड" },
     { path: "/about", label: language === "English" ? "About" : "परिचय" },
     { path: "/contact", label: language === "English" ? "Contact" : "संपर्क" },
   ];

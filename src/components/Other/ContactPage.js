@@ -12,7 +12,7 @@ const ContactPage = () => {
     e.preventDefault();
 
     // WhatsApp link generate
-    const whatsappNumber = "917370057723"; // <-- अपना WhatsApp नंबर डालो (91 के साथ)
+    const whatsappNumber = "917858971869"; // <-- अपना WhatsApp नंबर डालो (91 के साथ)
     const whatsappMessage = `Hello, I am ${form.name} (${form.email}). My message: ${form.message}`;
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       whatsappMessage
