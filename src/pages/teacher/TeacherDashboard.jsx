@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import TeacherLayout from "../../components/Teacher/TeacherLayout";
-import StatCard from "../../components/Teacher/StatCard";
+//import StatCard from "../../components/Teacher/StatCard";
 import TinyAreaChart from "../../components/Teacher/TinyAreaChart";
 import ProgressCircle from "../../components/Teacher/ProgressCircle.jsx";
 import { FaPlus, FaArrowRightLong } from "react-icons/fa6";
@@ -10,8 +10,6 @@ import API_BASE_URL from "../../config";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
 } from "../../components/ui/card";
 import "./TeacherDashboard.css";
 

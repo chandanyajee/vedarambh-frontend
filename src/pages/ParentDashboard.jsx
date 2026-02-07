@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaUser, FaCheckCircle, FaDownload, FaCalendarCheck, FaRupeeSign } from 'react-icons/fa';
+//import { FaUser, FaCheckCircle, FaDownload, FaCalendarCheck, FaRupeeSign } from 'react-icons/fa';
 
 export default function ParentDashboard() {
   const [parent, setParent] = useState(null);
